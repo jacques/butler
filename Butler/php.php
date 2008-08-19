@@ -36,7 +36,7 @@
  * @package   Butler
  * @author    Joe Stump <joe@joestump.net> 
  * @copyright 2008 Digg, Inc.
- * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
+ * @license   http://tinyurl.com/new-bsd-license New BSD License
  * @version   CVS: $Id:$
  * @link      http://code.google.com/p/digg
  */
@@ -50,7 +50,7 @@ require_once 'Butler/Common.php';
  * @package   Butler
  * @author    Joe Stump <joe@joestump.net> 
  * @copyright 2008 Digg, Inc.
- * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
+ * @license   http://tinyurl.com/new-bsd-license New BSD License
  * @link      http://code.google.com/p/digg
  */
 class Butler_php extends Butler_Common

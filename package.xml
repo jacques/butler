@@ -42,6 +42,8 @@
                       role="php" />
                 <file name="Exception.php" 
                       role="php" />
+                <file name="gearman.php" 
+                      role="php" />
                 <file name="pear.php" 
                       role="php" />
                 <file name="php.php" 
