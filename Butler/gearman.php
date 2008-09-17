@@ -79,7 +79,7 @@ class Butler_gearman extends Butler_Common
         if (!isset($_GET['servers']) || 
             !is_array($_GET['servers']) ||
             !count($_GET['servers'])) {
-            throw Butler_Exception('No Gearman servers configured');
+            throw new Butler_Exception('No Gearman servers configured');
         }
 
         foreach ($_GET['servers'] as $server) {
