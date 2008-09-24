@@ -20,8 +20,8 @@
     </lead>
     <date>2008-09-23</date>
     <version>
-        <release>0.0.2</release>
-        <api>0.0.2</api>
+        <release>0.0.3</release>
+        <api>0.0.3</api>
     </version>
     <stability>
         <release>alpha</release>
@@ -29,7 +29,7 @@
     </stability>
     <license uri="http://digg.com">Copyright Digg, Inc.</license>
     <notes><![CDATA[
-        * Fixed invalid exception call in Gearman plugin
+        * Fixed a bug when loading Gearman managers during reflection.
     ]]></notes>
     <contents>
         <dir name="/">
@@ -91,6 +91,57 @@
     </dependencies>
     <phprelease />
     <changelog>
+        <release>
+            <date>2008-09-23</date>
+            <version>
+                <release>0.0.2</release>
+                <api>0.0.2</api>
+            </version>
+            <stability>
+                <release>alpha</release>
+                <api>alpha</api>
+            </stability>
+            <license uri="http://digg.com">Copyright Digg, Inc.</license>
+            <notes><![CDATA[
+                * Fixed invalid exception call in Gearman plugin
+            ]]></notes>
+            <contents>
+                <dir name="/">
+                    <dir name="Butler">
+                        <file name="apc.php" 
+                              role="php" />
+                        <file name="butler.php" 
+                              role="php" />
+                        <file name="Common.php" 
+                              role="php" />
+                        <file name="Exception.php" 
+                              role="php" />
+                        <file name="gearman.php" 
+                              role="php" />
+                        <file name="pear.php" 
+                              role="php" />
+                        <file name="php.php" 
+                              role="php" />
+                        <file name="Serialize.php"
+                              role="php" />
+                        <dir name="Serialize">
+                            <file name="json.php"
+                                  role="php" />
+                            <file name="xml.php"
+                                  role="php" />
+                        </dir>
+                    </dir>
+                    <file name="Butler.php"
+                          role="php" />
+                    <dir name="examples" role="doc" baseinstalldir="doc/Butler">
+                        <file name="index.php"
+                              role="doc" />
+                        <file name="htaccess"
+                              role="doc" />
+                    </dir>
+                </dir>
+            </contents>
+        </release>
         <release>
             <date>2008-06-10</date>
             <version>

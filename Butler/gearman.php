@@ -68,13 +68,12 @@ class Butler_gearman extends Butler_Common
     protected $managers = array();
 
     /**
-     * Constructor 
+     * Load the {@link Net_Gearman_Manger} objects for each server
      *
-     * @access public
      * @throws {@link Butler_Exception} on invalid servers 
      * @return void
      */
-    public function __construct()
+    protected function loadManagers()
     {
         if (!isset($_GET['servers']) || 
             !is_array($_GET['servers']) ||
@@ -94,6 +93,8 @@ class Butler_gearman extends Butler_Common
      */
     public function version()
     {
+        $this->loadManagers();
+
         $versions = array();
         foreach ($this->managers as $server => $mgr) {
             $versions[] = array(
@@ -112,6 +113,8 @@ class Butler_gearman extends Butler_Common
      */
     public function workers()
     {
+        $this->loadManagers();
+
         $workers = array();
         foreach ($this->managers as $server => $mgr) {
             $workers[] = array(
@@ -130,6 +133,8 @@ class Butler_gearman extends Butler_Common
      */
     public function status()
     {
+        $this->loadManagers();
+
         $workers = array();
         foreach ($this->managers as $server => $mgr) {
             $s = array();
@@ -155,6 +160,8 @@ class Butler_gearman extends Butler_Common
      */
     public function setMaxQueueSize()
     {
+        $this->loadManagers();
+
         if (!isset($_GET['function']) || !isset($_GET['size'])) {
             throw new Butler_Exception('Both function and size are required');
         }
